@@ -8,8 +8,8 @@
   - ejs 
   
 ## node_modules used:
-  - concurrently
   - nodemon
   - browser-sync
+  - concurrently
   - body-parser
 
