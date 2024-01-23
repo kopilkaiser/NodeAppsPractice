@@ -1,0 +1,12 @@
+<%- include('./layouts/header.ejs') %>
+    <main>
+    <% if(items != undefined){ %>
+        <% for( let index = 0; index < items.length; index++ ) { %>
+        <div class="each-row">
+            <label><%= items[index].name %></label><label for="<%= items[index].name %>Qty" class="fruitPrice">£<%= items[index].price %></label><input class="fruitQuantity" type="number" id="<%= items[index].name %>Qty" value="0">
+        </div>
+        <% } %>
+    <% } %>
+    <div><button id="btnSubmit">Submit</button></div>
+    </main>
+<%- include('./layouts/footer.ejs') %>

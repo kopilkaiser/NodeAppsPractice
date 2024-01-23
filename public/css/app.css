@@ -1,0 +1,110 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border: solid 2px black;
+    background-color: black;
+    height: 10vh;
+}
+
+.pageTitle{
+    color:white;
+    font-size:1.5rem;
+}
+
+nav ul{
+    display:flex;
+    flex-direction: row;
+    padding: 0 1rem;
+    gap: 2rem;
+    list-style:none;
+}
+
+nav ul li {
+    font-size: 1.25rem;
+    border: solid 1px white;
+    border-radius: 0.25rem;
+    padding: 0.25rem 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li:hover{
+    background-color: rgb(2, 11, 68);
+    color: rgb(255, 0, 0);
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+}
+
+nav ul li a:hover{
+    color: rgb(164, 164, 255);
+}
+
+main{
+    font-size:1.5rem;
+    padding: 1rem;
+    height: 80vh;
+}
+
+.each-row{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin-bottom: 1rem;
+}
+
+.each-row input{
+    padding: 0.5rem;
+    font-size: 1.15rem;
+}
+
+#btnSubmit{
+    padding: 0.5rem 1rem;
+    background: transparent;
+    color:rgb(0, 0, 0);
+    border-left: solid 2px grey;
+    border-bottom: solid 2px grey;
+    border-top: none;
+    border-right: none;
+    transition: background-color 0.5s linear, border 0.1s linear;
+    outline: solid 1px red;
+}
+
+#btnSubmit:hover{
+    background-color: rgb(226, 53, 53);
+    color:rgb(242, 255, 0);
+}
+
+#btnSubmit:focus{
+    border-left:solid 0px grey;
+    border-bottom:solid 0px grey;
+}
+
+footer{  
+    position: relative;
+    font-size: 1.15rem;
+    background-color: black;
+    height: 10vh;
+    color:white;
+}
+
+footer p{
+    position: absolute;
+    text-align:center;
+    right:50%;
+    width:50%;
+    bottom:50%;
+    transform: translate(50%, 50%);
+    margin-left: auto;
+    margin-right: auto;
+}
