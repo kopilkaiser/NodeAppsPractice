@@ -31,7 +31,7 @@
 /* Chrome */
 .row-box-items::-webkit-scrollbar {
     width: 0.5rem;  /* width is for vertical scrollbars */
-    height: 0.8rem; /* height is for horizontal scrollbars */
+    height: 1.25rem; /* height is for horizontal scrollbars */
     scroll-behavior: smooth;
 }
 
@@ -56,6 +56,7 @@
   background: rgb(33, 124, 209); 
 }
 /* #endregion */
+
 
 .box{
    width:25vw;
