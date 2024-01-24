@@ -6,7 +6,7 @@
   "scripts": {
     "exec-server": "nodemon 'app_server.js'",
     "exec-client": "browser-sync start --config browsersync.config.js",
-    "exec-server-client" : "concurrently \"npm run exec-server\" \"npm run exec-client\""
+    "exec-app" : "concurrently \"npm run exec-server\" \"npm run exec-client\""
   },
   "keywords": [],
   "author": "",

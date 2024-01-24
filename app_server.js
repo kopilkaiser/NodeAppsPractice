@@ -17,6 +17,13 @@ app.get('/', (req, res) => {
     res.render('index.ejs', {items, pageTitle: "Home"});
 });
 
+// #region UI Practice routes
+   app.get('/ui-one', (req, res) => {
+        
+        res.render('ui-one', { pageTitle: "UI-One" });
+   });
+// #endregion
+
 app.get('/fruitcart', (req, res) => {
     const { totalPrice } = req.query;
     console.log(`total fruit purchased: £ ${totalPrice}`)

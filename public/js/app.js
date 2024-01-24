@@ -37,6 +37,10 @@ btnSubmit.addEventListener("click", function () {
   this.blur();
   setTimeout(() => {
     window.location.href = url;
-  }, 1000);
+  }, 500);
 });
+
+btnSubmit.addEventListener('mouseout', function(){
+  this.blur();
+})
 
