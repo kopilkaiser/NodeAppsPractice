@@ -1,6 +1,9 @@
 .row-box{
-    border: solid 2px black;
-    border-radius: 0.5rem;
+    border: solid 2px #313030;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.55rem;
+    border-bottom-left-radius: 0.55rem;
     margin-bottom: 1rem;
     padding: 1rem 0 0;
 }
@@ -8,7 +11,7 @@
 .row-box-header{
     align-self:start;
     padding-left: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .row-box-header span{
@@ -27,7 +30,9 @@
 /* #region Customising scrollbar forEach .rox-box-items */
 /* Chrome */
 .row-box-items::-webkit-scrollbar {
-    width: 5px;
+    width: 0.5rem;  /* width is for vertical scrollbars */
+    height: 0.8rem; /* height is for horizontal scrollbars */
+    scroll-behavior: smooth;
 }
 
 .row-box-items::-webkit-scrollbar-track {
@@ -37,7 +42,7 @@
 }
 
 .row-box-items::-webkit-scrollbar-thumb {
-  background-color: rgb(49, 48, 48); 
+  background-color: #313030; 
   border-radius: 10px;
   /* border: 1px solid red; */
 }
@@ -69,6 +74,12 @@
     width:100%;
     height:100%;
     object-fit: contain; /* default is "fill" */
+}
+
+@media screen and (max-width: 700px){
+    .row-box-header{
+        font-size: 1.25rem;
+    }
 }
 
 /* .redbox{
