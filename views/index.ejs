@@ -1,9 +1,27 @@
 <%- include('./layouts/header.ejs') %>
     <main>
+        <div class="showCartContainer">
+            <div class="cartButtons">
+                <button id="btnShowCart" class="cartBtn">Show Cart</button>
+                <button id="btnHideCart" class="cartBtn">Hide Cart</button>
+
+            </div>
+            <div class="cartDetails showCartDetails">
+               
+            </div>
+            
+        </div>
+        <div style="margin-bottom: 1rem;">
+            <p style="padding-bottom: 1rem;">Enter quanity for each fruit:</p>
+            <hr>
+        </div>
     <% if(items != undefined){ %>
         <% for( let index = 0; index < items.length; index++ ) { %>
         <div class="each-row">
-            <label><%= items[index].name %></label><label for="<%= items[index].name %>Qty" class="fruitPrice">£<%= items[index].price %></label><input class="fruitQuantity" type="number" id="<%= items[index].name %>Qty" value="0">
+            <label for="<%= items[index].name %>Qty" class="fruitPrice">£<%= items[index].price %></label>
+            <span>per</span>
+            <label class="fruitName"><%= items[index].name %></label>
+            <input class="fruitQuantity" type="number" id="<%= items[index].name %>Qty" value="0" min="0" max="999">
         </div>
         <% } %>
     <% } %>
