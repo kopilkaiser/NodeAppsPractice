@@ -17,8 +17,12 @@
 
 ### Journal
 * I've made use of Chrome browser's and JavaScript's built it object 'sessionStorage' to store items details in a JSON string format.
-   - I used JSON.stringify to store object (cart) in Application -> Storage -> SessionStorage
-   - Then use JSON.parse(stringifyItem) -> to convert back to a cart object in JavaScript to access the saved items and display it on to the cartDetailsContainer
- 
-* I've implemented dynamic element insertion from the JavaScript by adding DocumentObjectModel(DOM) elements from the JavaScript extracting the details of cart.items
+   - I used JSON.stringify(cartObj) to store object (cart) in Application in string format -> Storage -> SessionStorage
+   - Then used JSON.parse(cartStringified) to retrieve saved cart details -> by converting it back to a (cart object) in JavaScript to access the saved items details and display it back onto HTML page in the cartDetailsContainer, where:
+   - I've manipulated DocumentObjectModel by creating individual childElements and appending to parentElement. Child element textContent, innerHTML got set to different cart details by iterating over the cart.items[] array. And, this helped me to dynamically display user interaction on the front-end.
+   - the back-end is validated with the help of Express server's domain, and by consuming user requests through GET methods and giving them feedbacks with the help of URL navigation, or POST methods.
+    
 * Customised scrollbar for the website using the Chrome's supported '-webkit-scrollbar' on the element which has overflow. And setting properties to each -webkit-scrollbar properties like main::-webkit-scrollbar-thumb, main::-webkit-scrollbar-thumb:hover (changes background-color when user hover mouse on the scrollbar) and many more UI improvements.
+
+
+### I'm enthusiastic and energetic to further improve my skills on this given area of Node.js tech-stack as it is a new technology to me, but it has somewhat similar fundamentals to what I've experienced in developing on AspNet Core MVC project, where I've used routings, getting user requests, and providing them with responses(GET,POST, PUT, DELETE) Web API fundamentals.
