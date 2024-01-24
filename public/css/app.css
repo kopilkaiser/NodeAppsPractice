@@ -28,7 +28,7 @@ nav ul{
 }
 
 nav ul li {
-    font-size: 1.25rem;
+    font-size: 2rem;
     border: solid 1px white;
     border-radius: 0.25rem;
     padding: 0.25rem 1rem;
@@ -36,8 +36,7 @@ nav ul li {
 }
 
 nav ul li:hover{
-    background-color: rgb(2, 11, 68);
-    color: rgb(255, 0, 0);
+    background-color: rgb(255, 0, 4);
 }
 
 nav ul li a{
@@ -47,13 +46,13 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: rgb(164, 164, 255);
+    color: rgb(0, 0, 0);
 }
 
 main{
     font-size:1.5rem;
     padding: 1rem;
-    height: 80vh;
+    height: 82vh;
     overflow-x: auto;
     overflow-y: auto
 }
@@ -96,7 +95,7 @@ footer{
     position: relative;
     font-size: 1.15rem;
     background-color: black;
-    height: 10vh;
+    height: 8vh;
     color:white;
 }
 
@@ -115,4 +114,16 @@ footer p{
     transform: translate(50%, 50%);
     margin-left: auto;
     margin-right: auto;
+}
+
+@media screen and (max-width: 900px){
+    nav ul li {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 700px){
+    nav ul li {
+        font-size: 1rem;
+    }
 }
