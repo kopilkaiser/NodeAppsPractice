@@ -1,35 +1,41 @@
 <%- include('./layouts/header.ejs') %>
     <main>
+        <div class="main-content">
+
         <div class="showCartContainer">
             <div class="cartButtons">
                 <button id="btnShowCart" class="cartBtn">Show Cart</button>
                 <button id="btnHideCart" class="cartBtn">Hide Cart</button>
-
             </div>
             <div class="cartDetails showCartDetails">
-               
+
             </div>
-            
         </div>
-        <div style="margin-bottom: 1rem;">
-            <p style="padding-bottom: 1rem;">Enter quanity for each fruit:</p>
+
+        <div class="form-container" style="margin-bottom: 1rem;">
+            <p class="form-container-header">Enter quanity for each fruit:</p>
             <hr>
+
+            <% if(items !=undefined){ %>
+                <% for( let index=0; index < items.length; index++ ) { %>
+                    <div class="each-row">
+                        <label for="<%= items[index].name %>Qty" class="fruitPrice">£<%= items[index].price %></label>
+                        <span>per</span>
+                        <label class="fruitName">
+                            <%= items[index].name %>
+                        </label>
+                        <input class="fruitQuantity" type="number" id="<%= items[index].name %>Qty" value="0" min="0"
+                            max="999">
+                    </div>
+                    <% } %>
+                        <% } %>
+                            <div><button id="btnSubmit">Submit</button></div>
         </div>
-    <% if(items != undefined){ %>
-        <% for( let index = 0; index < items.length; index++ ) { %>
-        <div class="each-row">
-            <label for="<%= items[index].name %>Qty" class="fruitPrice">£<%= items[index].price %></label>
-            <span>per</span>
-            <label class="fruitName"><%= items[index].name %></label>
-            <input class="fruitQuantity" type="number" id="<%= items[index].name %>Qty" value="0" min="0" max="999">
-        </div>
-        <% } %>
-    <% } %>
-    <div><button id="btnSubmit">Submit</button></div>
-    <div class="ui-buttons-container">
-        <a href="/ui-one">UI One</a>
-        <a href="#">UI Two</a>
-        <a href="#">UI Three</a>
     </div>
+        <div class="ui-buttons-container">
+            <a href="/ui-one">UI One</a>
+            <a href="#">UI Two</a>
+            <a href="#">UI Three</a>
+        </div>
     </main>
-<%- include('./layouts/footer.ejs') %>
+    <%- include('./layouts/footer.ejs') %>
