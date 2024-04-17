@@ -47,10 +47,10 @@
   /* border: 1px solid red; */
 }
 
-/*.container::-webkit-scrollbar-button {
-  background-color: red;
+.container::-webkit-scrollbar-track-piece {
+  background-color: rgb(17, 0, 255);
    border-radius: 15px;
-}*/
+}
 
 .row-box-items::-webkit-scrollbar-thumb:hover {
   background: rgb(33, 124, 209); 

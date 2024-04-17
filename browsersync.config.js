@@ -9,6 +9,7 @@ module.exports = {
   watchOptions: {
     ignored: "node_modules",
   },
+  open : false,
   logLevel: "info",
   notify: false
 };
